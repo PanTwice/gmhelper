@@ -16,10 +16,16 @@ import org.zz.gmhelper.Sm2Util;
 
 public class Sm2UtilTest extends GmBaseTest {
 
+    /**
+     * 签名和校验
+     */
     @Test
     public void testSignAndVerify() {
         try {
+            // 生成密钥对
             AsymmetricCipherKeyPair keyPair = Sm2Util.generateKeyPair();
+
+            // 分别获取公钥和私钥
             ECPrivateKeyParameters priKey = (ECPrivateKeyParameters) keyPair.getPrivate();
             ECPublicKeyParameters pubKey = (ECPublicKeyParameters) keyPair.getPublic();
 
@@ -52,6 +58,9 @@ public class Sm2UtilTest extends GmBaseTest {
         }
     }
 
+    /**
+     * 公钥加密私钥解密
+     */
     @Test
     public void testEncryptAndDecrypt() {
         try {

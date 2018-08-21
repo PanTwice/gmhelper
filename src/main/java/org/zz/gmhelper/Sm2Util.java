@@ -20,8 +20,8 @@ import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECPoint;
 
 public class Sm2Util extends GmBaseUtil {
-    //////////////////////////////////////////////////////////////////////////////////////
-    /*
+
+    /**
      * 以下为SM2推荐曲线参数
      */
     public final static BigInteger SM2_ECC_P = new BigInteger(
